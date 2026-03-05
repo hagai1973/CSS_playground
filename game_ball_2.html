@@ -24,6 +24,18 @@
             line-height: 100px;
             font-size: 24px;
             font-weight: bold;
+            transition: width 0.3s ease, height 0.3s ease, line-height 0.3s ease;
+            padding: 20px;
+            margin: 30px auto;
+  
+
+
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background-color: red;
         }
         
 
@@ -31,6 +43,20 @@
 </head>
 <body>
     <h1>Click the ball</h1>
-    <div>100</div>
+    <div class="green" onclick="when_ball_click(this)">100</div>
+    <div class="red" onclick="when_ball_click(this)">100</div>
+    <script>
+
+        function when_ball_click(ball){
+            ball_size = parseInt(ball.innerText)
+            ball_size += 50
+            if (ball_size > 400)
+                ball_size = 100
+            ball.innerText = ball_size
+            ball.style.width = ball_size + 'px'
+            ball.style.height = ball_size + 'px'
+            ball.style.lineHeight = ball_size + 'px'
+        }
+    </script>
 </body>
 </html>
