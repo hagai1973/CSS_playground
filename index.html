@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game CSS </title>
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            color: whitesmoke;
+        }
+        div {
+            text-align: center;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            line-height: 120px;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            margin: 20px auto;
+
+        }
+        .ball_1 {
+            background-color: yellow;
+            
+        }
+        .ball_2 {
+            background: grey
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Lets Play!</h1>
+    <div class="ball_1" onclick="when_b1_click()">100</div> 
+    <div class="ball_2">100</div> 
+
+    <script>
+        ball_size = 100
+        function when_b1_click(){
+            ball_size += 50
+            if (ball_size > 400)
+                ball_size = 100
+            b1 = document.querySelector('.ball_1')
+            b1.innerText = ball_size
+            b1.style.width = ball_size + 'px'
+            b1.style.height = ball_size + 'px'
+        }
+
+    </script>
+</body>
+</html>
